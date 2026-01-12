@@ -1,0 +1,35 @@
+# ----------------------------------
+# Méta données associées à votre jeu
+# metadata.yaml
+# - LES CHAMPS OBLIGATOIRES SONT INDIQUÉS PAR [!]
+# - NE SUPPRIMEZ PAS LES CHAMPS VIDES laissez par exemple,    abstract: ""
+# ----------------------------------
+title: "[!] Title of your game" # Le titre tel qu'il apparaîtra lors de la présentation
+abstract: "In this game, you play as a hero who must save the world from impending doom." # Résumé de votre jeu
+team: "[!] La DreamTeam" # Le nom de votre équipe tel qu'il apparaîtra à la présentation
+motto: "soit une masterclass soit un flop" # Le slogan de votre équipe
+members: # Liste des membres de l'équipe (ajoutez un bloc par membre)
+  # --- Premier membre ---
+  - firstname: "[!] Maya" # Prénom
+    lastname: "[!] Chalencon" # Nom
+    nickname: "Nickname" # Pseudo
+    group: "[!] Terminale" # Groupe de TP (Ex : INF_S2_3A)
+    bestgame: "Target Renegade" # Jeu préféré de tous les temps
+    momentgame: "Jupyter" # Jeu préféré du moment
+    ostgame: "Save The Poulettes" # Bande son / musique de jeu vidéo préférée
+    character: "Fruity Franck" # Personnage de jeu vidéo préféré
+  # --- Deuxième membre ---
+  - firstname: "[!]Tom" # Prénom
+    lastname: "[!]Raineri" # Nom
+    nickname: "Pom panini" # Pseudo
+    group: "[!]Promo 2024" # Groupe de TP (Ex : INF_S4_2B)
+    bestgame: "Hollow knight" # Jeu préféré de tous les temps
+    momentgame: "Super smash bros" # Jeu préféré du moment
+    ostgame: "je n'ecoute pas les musiques des jeux" # Bande son / musique de jeu vidéo préférée
+    character: "Corrin SSBU" # Personnage préféré
+engine: "GODOT" # Moteur de jeu utilisé (exemples : "Pygame" "Phaser" "Godot" "Unity" "Unreal" "Custom/Python" "Custom/Javascript")
+credits:
+  - audio: "Poevann Peguan" # Audio
+  - graphics: "self production" # Graphismes
+  - thanks: "My friends, my family, and Eric Cantona" # Remerciements
+message: "?!?!" # Information ou message à ajouter, et qui ne correspondait à aucun item de ce template
