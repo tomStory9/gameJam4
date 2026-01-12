@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq2fgjf63rw8"]
+
+[ext_resource type="Script" uid="uid://dr706u6fwxeya" path="res://game/note.gd" id="1_oa506"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Game"]
+offset_right = 374.0
+offset_bottom = 309.0
+
+[node name="Button" type="Node2D" parent="Game"]
+
+[node name="UpButton" type="TextureButton" parent="Game/Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DownButton" type="TextureButton" parent="Game/Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftButton" type="TextureButton" parent="Game/Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RightButton" type="TextureButton" parent="Game/Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Node2D" parent="Game"]
+
+[node name="ScoreLabel" type="Label" parent="Game/Score"]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="NodeContainer" type="Node2D" parent="Game"]
+
+[node name="Note" type="Sprite2D" parent="Game/NodeContainer"]
+script = ExtResource("1_oa506")
