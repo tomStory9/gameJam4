@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cq2fgjf63rw8"]
+[gd_scene load_steps=10 format=3 uid="uid://cq2fgjf63rw8"]
 
 [ext_resource type="Script" uid="uid://bswbhae7qt4jw" path="res://game/game.gd" id="1_lx3aj"]
+[ext_resource type="Script" uid="uid://dr706u6fwxeya" path="res://game/note.gd" id="1_oa506"]
 [ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="1_xkbyp"]
 [ext_resource type="Texture2D" uid="uid://cepdv5toisxvo" path="res://artwork/assets/sprites/arrow_right_button.png" id="2_lx3aj"]
 [ext_resource type="Texture2D" uid="uid://bdmfor3n18olo" path="res://artwork/assets/sprites/arrow_up_button.png" id="3_itumj"]
 [ext_resource type="Texture2D" uid="uid://c3jk4tq0gt2vq" path="res://artwork/assets/sprites/arrow_down_button.png" id="4_dp3pf"]
 [ext_resource type="Texture2D" uid="uid://nae4rmj1ffqj" path="res://artwork/assets/sprites/arrow_left_button.png" id="5_ioaqv"]
 [ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://artwork/assets/upheavtt.ttf" id="6_li27q"]
+[ext_resource type="Texture2D" uid="uid://nxxy8n8p0agl" path="res://artwork/assets/sprites/arrow_down_note.png" id="7_g6fv7"]
 
 [node name="Main" type="Node2D"]
 
@@ -16,54 +18,58 @@ script = ExtResource("1_lx3aj")
 [node name="MidiPlayer" parent="Game" instance=ExtResource("1_xkbyp")]
 
 [node name="ColorRect" type="ColorRect" parent="Game"]
-offset_right = 511.0
+offset_right = 710.0
 offset_bottom = 755.0
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Node2D" parent="Game"]
 
 [node name="RightButton" type="TextureButton" parent="Game/Button"]
-offset_left = 334.0
-offset_top = 547.0
-offset_right = 366.0
-offset_bottom = 579.0
+offset_left = 281.0
+offset_top = 544.0
+offset_right = 313.0
+offset_bottom = 576.0
 texture_normal = ExtResource("2_lx3aj")
 
 [node name="UpButton" type="TextureButton" parent="Game/Button"]
-offset_left = 242.0
-offset_top = 549.0
-offset_right = 275.0
-offset_bottom = 581.0
+offset_left = 189.0
+offset_top = 546.0
+offset_right = 222.0
+offset_bottom = 578.0
 texture_normal = ExtResource("3_itumj")
 
 [node name="DownButton" type="TextureButton" parent="Game/Button"]
-offset_left = 289.0
-offset_top = 547.0
-offset_right = 329.0
-offset_bottom = 587.0
+offset_left = 236.0
+offset_top = 544.0
+offset_right = 276.0
+offset_bottom = 584.0
 texture_normal = ExtResource("4_dp3pf")
 
 [node name="LeftButton" type="TextureButton" parent="Game/Button"]
-offset_left = 191.0
-offset_top = 549.0
-offset_right = 231.0
-offset_bottom = 589.0
+offset_left = 138.0
+offset_top = 546.0
+offset_right = 178.0
+offset_bottom = 586.0
 texture_normal = ExtResource("5_ioaqv")
 metadata/_edit_use_anchors_ = true
-
-[node name="NotesContainer" type="Node2D" parent="Game"]
 
 [node name="Score" type="Node2D" parent="Game"]
 
 [node name="ScoreLabel" type="Label" parent="Game/Score"]
 custom_minimum_size = Vector2(40, 40)
-offset_left = 117.0
+offset_left = 238.0
 offset_top = 36.0
-offset_right = 315.0
+offset_right = 436.0
 offset_bottom = 78.0
 theme_override_fonts/font = ExtResource("6_li27q")
 theme_override_font_sizes/font_size = 40
 text = "123"
 horizontal_alignment = 1
 
-[connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]
+[node name="NodeContainer" type="Node2D" parent="Game"]
+
+[node name="Note" type="Sprite2D" parent="Game/NodeContainer"]
+position = Vector2(252, 492)
+scale = Vector2(1.2656252, 1.2968745)
+texture = ExtResource("7_g6fv7")
+script = ExtResource("1_oa506")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7t6bl2mddtrn"]
+
+[ext_resource type="Texture2D" uid="uid://nxxy8n8p0agl" path="res://artwork/assets/sprites/arrow_down_note.png" id="1_2hrf2"]
+[ext_resource type="Script" uid="uid://dr706u6fwxeya" path="res://game/note.gd" id="2_3bh56"]
+
+[node name="NoteContainer" type="Node2D"]
+script = ExtResource("2_3bh56")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9, 15)
+texture = ExtResource("1_2hrf2")
