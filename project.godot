@@ -21,6 +21,6 @@ Highscore="*res://game/highscore.gd"
 
 [display]
 
-window/size/viewport_width=512
+window/size/viewport_width=1024
 window/size/viewport_height=756
 window/stretch/mode="canvas_items"

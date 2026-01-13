@@ -22,7 +22,6 @@ func update_points(type: TimingJudgement):
 
 func update_displayed_points() -> void:
  var difference = abs(points - displayed_points)
- # Determine the step size dynamically
  var step = max(1, difference * 0.2)
  if displayed_points < points:
   displayed_points =  min(displayed_points + step, points);

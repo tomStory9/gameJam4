@@ -11,13 +11,10 @@ motto: "soit une masterclass soit un flop" # Le slogan de votre équipe
 members: # Liste des membres de l'équipe (ajoutez un bloc par membre)
   # --- Premier membre ---
   - firstname: "[!] Maya" # Prénom
-    lastname: "[!] Chalencon" # Nom
+    lastname: "[!] Chalençon" # Nom
     nickname: "Nickname" # Pseudo
     group: "[!] Terminale" # Groupe de TP (Ex : INF_S2_3A)
-    bestgame: "Target Renegade" # Jeu préféré de tous les temps
-    momentgame: "Jupyter" # Jeu préféré du moment
-    ostgame: "Save The Poulettes" # Bande son / musique de jeu vidéo préférée
-    character: "Fruity Franck" # Personnage de jeu vidéo préféré
+
   # --- Deuxième membre ---
   - firstname: "[!]Tom" # Prénom
     lastname: "[!]Raineri" # Nom

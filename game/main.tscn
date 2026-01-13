@@ -8,48 +8,57 @@
 [ext_resource type="Texture2D" uid="uid://nae4rmj1ffqj" path="res://artwork/assets/sprites/arrow_left_button.png" id="5_ioaqv"]
 [ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://artwork/assets/upheavtt.ttf" id="6_li27q"]
 [ext_resource type="Script" uid="uid://8nobx6x2gwos" path="res://game/score.gd" id="7_lx3aj"]
-[ext_resource type="AudioStream" uid="uid://bs3aqxy3pxdy1" path="res://artwork/assets/rhythm_tut.mp3" id="8_xkbyp"]
+[ext_resource type="AudioStream" uid="uid://deqicyj6swni2" path="res://artwork/assets/italian-italy-tarantella-music-321645.mp3" id="9_lx3aj"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Game" type="Node2D" parent="."]
 script = ExtResource("1_lx3aj")
 
+[node name="PizzaFactory" type="Node2D" parent="Game"]
+
+[node name="ColorRect" type="ColorRect" parent="Game/PizzaFactory"]
+offset_left = 384.0
+offset_right = 1024.0
+offset_bottom = 755.0
+color = Color(0.39748234, 5.5350364e-07, 1.6845763e-07, 1)
+
 [node name="MidiPlayer" parent="Game" instance=ExtResource("1_xkbyp")]
+file = "uid://deqicyj6swni2"
 
 [node name="ColorRect" type="ColorRect" parent="Game"]
-offset_right = 511.0
+offset_right = 384.0
 offset_bottom = 755.0
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Node2D" parent="Game"]
 
 [node name="RightButton" type="TextureButton" parent="Game/Button"]
-offset_left = 334.0
-offset_top = 547.0
-offset_right = 366.0
-offset_bottom = 579.0
+offset_left = 248.0
+offset_top = 552.0
+offset_right = 280.0
+offset_bottom = 584.0
 texture_normal = ExtResource("2_lx3aj")
 
 [node name="UpButton" type="TextureButton" parent="Game/Button"]
-offset_left = 242.0
-offset_top = 549.0
-offset_right = 275.0
-offset_bottom = 581.0
+offset_left = 136.0
+offset_top = 552.0
+offset_right = 169.0
+offset_bottom = 584.0
 texture_normal = ExtResource("3_itumj")
 
 [node name="DownButton" type="TextureButton" parent="Game/Button"]
-offset_left = 289.0
-offset_top = 547.0
-offset_right = 329.0
-offset_bottom = 587.0
+offset_left = 192.0
+offset_top = 552.0
+offset_right = 232.0
+offset_bottom = 592.0
 texture_normal = ExtResource("4_dp3pf")
 
 [node name="LeftButton" type="TextureButton" parent="Game/Button"]
-offset_left = 191.0
-offset_top = 549.0
-offset_right = 231.0
-offset_bottom = 589.0
+offset_left = 80.0
+offset_top = 552.0
+offset_right = 120.0
+offset_bottom = 592.0
 texture_normal = ExtResource("5_ioaqv")
 metadata/_edit_use_anchors_ = true
 
@@ -60,16 +69,16 @@ script = ExtResource("7_lx3aj")
 
 [node name="ScoreLabel" type="Label" parent="Game/Score"]
 custom_minimum_size = Vector2(40, 40)
-offset_left = 160.0
-offset_top = 24.0
-offset_right = 358.0
-offset_bottom = 66.0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 294.0
+offset_bottom = 58.0
 theme_override_fonts/font = ExtResource("6_li27q")
 theme_override_font_sizes/font_size = 40
-text = "123"
+text = "0"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game"]
-stream = ExtResource("8_xkbyp")
+stream = ExtResource("9_lx3aj")
 
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]
