@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cq2fgjf63rw8"]
+[gd_scene load_steps=11 format=3 uid="uid://cq2fgjf63rw8"]
 
 [ext_resource type="Script" uid="uid://bswbhae7qt4jw" path="res://game/game.gd" id="1_lx3aj"]
 [ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="1_xkbyp"]
 [ext_resource type="Texture2D" uid="uid://cepdv5toisxvo" path="res://artwork/assets/sprites/arrow_right_button.png" id="2_lx3aj"]
+[ext_resource type="Texture2D" uid="uid://cng2043r1kr0p" path="res://artwork/pizza.png" id="3_dp3pf"]
 [ext_resource type="Texture2D" uid="uid://bdmfor3n18olo" path="res://artwork/assets/sprites/arrow_up_button.png" id="3_itumj"]
 [ext_resource type="Texture2D" uid="uid://c3jk4tq0gt2vq" path="res://artwork/assets/sprites/arrow_down_button.png" id="4_dp3pf"]
 [ext_resource type="Texture2D" uid="uid://nae4rmj1ffqj" path="res://artwork/assets/sprites/arrow_left_button.png" id="5_ioaqv"]
@@ -15,21 +16,17 @@
 [node name="Game" type="Node2D" parent="."]
 script = ExtResource("1_lx3aj")
 
-[node name="PizzaFactory" type="Node2D" parent="Game"]
-
-[node name="ColorRect" type="ColorRect" parent="Game/PizzaFactory"]
-offset_left = 384.0
-offset_right = 1024.0
-offset_bottom = 755.0
-color = Color(0.39748234, 5.5350364e-07, 1.6845763e-07, 1)
-
 [node name="MidiPlayer" parent="Game" instance=ExtResource("1_xkbyp")]
-file = "uid://deqicyj6swni2"
 
 [node name="ColorRect" type="ColorRect" parent="Game"]
 offset_right = 384.0
 offset_bottom = 755.0
 color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game"]
+position = Vector2(192.00002, 375.99997)
+scale = Vector2(0.24999999, 0.73437494)
+texture = ExtResource("3_dp3pf")
 
 [node name="Button" type="Node2D" parent="Game"]
 
@@ -41,9 +38,9 @@ offset_bottom = 584.0
 texture_normal = ExtResource("2_lx3aj")
 
 [node name="UpButton" type="TextureButton" parent="Game/Button"]
-offset_left = 136.0
+offset_left = 128.0
 offset_top = 552.0
-offset_right = 169.0
+offset_right = 161.0
 offset_bottom = 584.0
 texture_normal = ExtResource("3_itumj")
 

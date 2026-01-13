@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg8jtfdxvpnqs"
-path="res://.godot/imported/pizza.png-1b112716ece75de7442f7ab304ff12b2.ctex"
+uid="uid://d07hp6ccufmsf"
+path="res://.godot/imported/nourrit.jpg-9f1c068c0237d237b926339220e0b3fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artwork/assets/pizza.png"
-dest_files=["res://.godot/imported/pizza.png-1b112716ece75de7442f7ab304ff12b2.ctex"]
+source_file="res://artwork/assets/sprites/nourrit.jpg"
+dest_files=["res://.godot/imported/nourrit.jpg-9f1c068c0237d237b926339220e0b3fe.ctex"]
 
 [params]
 

@@ -10,25 +10,25 @@ const TIMING_OFFSET := (1.0/FALLING_SPEED_SCALE)
  36: {
   "key": "ui_up",
   "button": get_node("Button/UpButton"),
-  "texture": preload("res://artwork/assets/sprites/arrow_up_note.png"),
+  "texture": preload("res://artwork/assets/sprites/aasiff.jpg"),
 "queue":[]
  },
  38: {
   "key": "ui_down",
   "button": get_node("Button/DownButton"),
-  "texture": preload("res://artwork/assets/sprites/arrow_down_note.png"),
+  "texture": preload("res://artwork/assets/sprites/chalencon.jpg"),
 "queue":[]
  },
  40: {
   "key": "ui_left",
   "button": get_node("Button/LeftButton"),
-  "texture": preload("res://artwork/assets/sprites/arrow_left_note.png"),
+  "texture": preload("res://artwork/assets/sprites/nourrit.jpg"),
 "queue":[]
  },
  42: {
   "key": "ui_right",
   "button": get_node("Button/RightButton"),
-  "texture": preload("res://artwork/assets/sprites/arrow_right_note.png"),
+  "texture": preload("res://artwork/assets/sprites/aasiff.jpg"),
   "queue":[]
  }
 }
